@@ -1,3 +1,4 @@
+/* Global Settings */
 * {
   margin: 0;
   padding: 0;
@@ -6,24 +7,19 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #1e3c72, #2a5298, #000000);
+  background: linear-gradient(135deg, #f0f4f8, #ffffff);
   background-size: 200% 200%;
   min-height: 100vh;
-  color: white;
+  color: #333;
   animation: gradientFade 10s ease infinite;
-  perspective: 1000px; /* Important for 3D effects */
+  perspective: 1000px; 
 }
 
-
-/*Soft gradient movement*/
 @keyframes gradientFade {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
-
-
-
 
 /* Navbar */
 .navbar {
@@ -31,16 +27,19 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px 50px;
-  background: white;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background: linear-gradient(135deg, #ffffff, #e0e0e0);
+  color: #333;
   position: sticky;
   top: 0;
   z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  transition: background 0.5s ease;
 }
 
 .logo {
   font-weight: bold;
   font-size: 24px;
+  color: #2a5298;
 }
 
 .nav-links {
@@ -49,26 +48,26 @@ body {
   gap: 25px;
 }
 
-.nav-links li a {
+.nav-links a {
   text-decoration: none;
   color: #333;
   font-size: 18px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #1e90ff;
 }
 
 .nav-links li {
-  transition: transform 0.3s ease, background-color 0.3s ease; /* Removed scale transition */
-  padding: 8px 15px; /* Set a base padding */
-  border-radius: 8px; /* Set a base border-radius */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  padding: 8px 15px;
+  border-radius: 8px;
 }
 
 .nav-links li:hover {
-  transform: translateY(-2px); /* Minimal float */
-  background: linear-gradient(135deg, #1e3c72, #2a5298, #000000); /* Match body bg */
-  color: white !important; /* Ensure text is white on hover */
-}
-
-.nav-links li:hover a {
-  color: white !important; /* Ensure link text is white on hover */
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #e0eafc, #cfdef3);
 }
 
 /* Hero Section */
@@ -88,6 +87,7 @@ body {
 .home-content h1 {
   font-size: 68px;
   margin-bottom: 10px;
+  color: #1e3c72;
 }
 
 .name-highlight {
@@ -98,28 +98,18 @@ body {
   font-weight: 900;
   font-size: 50px;
   display: inline-block;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), 0 0 20px #2a5298;
-  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
-  transform: rotateX(5deg) rotateY(-5deg);
-  transition: transform 0.5s, box-shadow 0.5s;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
-
-.name-highlight:hover {
-  transform: rotateX(0deg) rotateY(0deg) scale(1.05);
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.7), 0 0 25px #2a5298;
-}
-
-
 
 .home-content h2 {
   font-size: 24px;
-  color: #191919af;
+  color: #555;
   margin-bottom: 20px;
 }
 
 .home-content p {
   font-size: 18px;
-  color: #e0e9a8;
+  color: #666;
   margin-bottom: 30px;
 }
 
@@ -128,12 +118,12 @@ body {
   height: 300px;
   object-fit: cover;
   border-radius: 50%;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-  margin-top: 30px;
-  background-image: radial-gradient(circle at center, #2a5298 20%, #1e3c72 80%); /* Added gradient */
-  border: 5px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  background-image: radial-gradient(circle at center, #cfd9df, #e2ebf0);
+  border: 5px solid rgba(0, 0, 0, 0.05);
 }
-/* Button & Icons */
+
+/* Buttons */
 .buttons {
   display: flex;
   align-items: center;
@@ -142,24 +132,22 @@ body {
 }
 
 .btn {
-  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  background: linear-gradient(135deg, #2a5298, #1e3c72);
   color: white;
   padding: 12px 24px;
   border-radius: 30px;
   text-decoration: none;
   font-weight: 600;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
   transition: all 0.3s ease;
-  transform: perspective(600px) translateZ(10px);
 }
 
 .btn:hover {
-  transform: perspective(600px) translateZ(20px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-  background: linear-gradient(135deg, #2a5298, #1e3c72);
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
 }
 
-
+/* Social Icons */
 .social-icons {
   display: flex;
   align-items: center;
@@ -170,112 +158,44 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.1); /* Light glass effect */
-  color: white;
+  background: rgba(0, 0, 0, 0.05);
+  color: #1e3c72;
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  text-decoration: none;
   font-size: 22px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
-  backdrop-filter: blur(5px); /* GLASS effect */
+  text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .icon-circle:hover {
-  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  background: linear-gradient(135deg, #2a5298, #1e3c72);
   color: white;
-  transform: translateY(-5px) scale(1.1);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
 }
 
-
-/* Hero Image */
-.hero-image img {
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 50%;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-  margin-top: 30px;
-}
-
-/* Entrance Animations */
-.hero-content h1, 
-.hero-content h2, 
-.hero-content p, 
-.buttons, 
-.social-icons {
-  opacity: 0;
-  transform: translateX(-50px);
-  animation: slideInLeft 1s ease forwards;
-}
-
-/* Image comes from top */
-.hero-image img {
-  opacity: 0;
-  transform: translateY(-50px);
-  animation: slideInTop 1s ease forwards;
-}
-
-/* Line-by-line delays */
-.hero-content h1 {
-  animation-delay: 0.1s;
-}
-
-.hero-content h2 {
-  animation-delay: 0.2s;
-}
-
-.hero-content p {
-  animation-delay: 0.4s;
-}
-
-.buttons {
-  animation-delay: 0.5s;
-}
-
-.social-icons {
-  animation-delay: 0.3s;
-}
-
-.hero-image img {
-  animation-delay: 0.3s;
-}
-
-/* Keyframes for sliding in from left */
+/* Animations */
 @keyframes slideInLeft {
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  to { opacity: 1; transform: translateX(0); }
 }
-
-/* Keyframes for image sliding down from top */
 @keyframes slideInTop {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  to { opacity: 1; transform: translateY(0); }
 }
-
 
 /* Education Section */
 .education {
   padding: 80px 50px;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
   margin-top: 50px;
   border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
 .section-title {
   font-size: 48px;
   text-align: center;
   margin-bottom: 50px;
-  color: white;
-  text-shadow: 0 2px 5px rgba(0,0,0,0.7);
+  color: #1e3c72;
 }
 
 .education-container {
@@ -285,81 +205,119 @@ body {
 }
 
 .education-card {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.9);
   border-radius: 15px;
   padding: 30px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
   transition: all 0.4s ease;
-  transform: translateX(-50px);
-  opacity: 0;
-  animation: slideInCard 1s forwards;
 }
-
-.education-card:nth-child(1) { animation-delay: 0.2s; }
-.education-card:nth-child(2) { animation-delay: 0.4s; }
-.education-card:nth-child(3) { animation-delay: 0.6s; }
 
 .education-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
 
 .education-card h3 {
   font-size: 24px;
-  margin-bottom: 10px;
+  color: #2a5298;
 }
 
-.school-name {
+.school-name, .education-year, .education-desc {
+  color: #555;
+}
+
+/* Projects Section */
+.projects {
+  padding: 80px 50px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  margin-top: 50px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.project-title {
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #1e3c72;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  padding: 30px;
+  width: 300px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: all 0.4s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.project-card h3 {
+  font-size: 22px;
+  color: #2a5298;
+}
+
+.project-card p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Contact Section */
+.contact {
+  padding: 80px 50px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  margin-top: 50px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.contact-card {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  min-width: 250px;
+  transition: all 0.4s ease;
+}
+
+.contact-card h3 {
+  font-size: 24px;
+  color: #2a5298;
+}
+
+.contact-card p {
   font-size: 18px;
-  color: #ccc;
-  margin-bottom: 5px;
+  color: #555;
 }
 
-.education-year {
-  font-size: 16px;
-  color: #aaa;
-  margin-bottom: 15px;
-}
-
-.education-desc {
-  font-size: 16px;
-  color: #eee;
-}
-
-/* Animation Keyframes */
-@keyframes slideInCard {
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-/* Responsive for mobile */
-@media (max-width: 768px) {
-  .education-container {
-    gap: 20px;
-  }
-  .education-card {
-    padding: 20px;
-  }
-  .section-title {
-    font-size: 36px;
-  }
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-
-/* Loader Styles */
+/* Loader */
 #loader {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #1e3c72, #2a5298, #000000);
+  background: linear-gradient(135deg, #e2ebf0, #ffffff);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -369,7 +327,7 @@ html {
 
 .spinner {
   border: 8px solid #f3f3f3;
-  border-top: 8px solid #2f52e0;
+  border-top: 8px solid #2a5298;
   border-radius: 50%;
   width: 80px;
   height: 80px;
@@ -383,8 +341,17 @@ html {
 }
 
 #loader p {
-  color: white;
+  color: #2a5298;
   font-size: 20px;
   font-weight: 600;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .education-container,
+  .projects-container,
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
 }
