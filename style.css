@@ -86,7 +86,7 @@ body {
 
 .home-content h1 {
   font-size: 68px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   color: #1e3c72;
 }
 
@@ -200,16 +200,19 @@ body {
 
 .education-container {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 30px;
+  justify-content: center;
 }
 
 .education-card {
   background: rgba(255, 255, 255, 0.9);
   border-radius: 15px;
   padding: 30px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  width: 300px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.4s ease;
+  text-align: left;
 }
 
 .education-card:hover {
@@ -217,12 +220,16 @@ body {
 }
 
 .education-card h3 {
-  font-size: 24px;
+  font-size: 22px;
   color: #2a5298;
 }
 
-.school-name, .education-year, .education-desc {
+.education-card .school-name,
+.education-card .education-year,
+.education-card .education-desc {
+  font-size: 16px;
   color: #555;
+  margin-top: 8px;
 }
 
 /* Projects Section */
@@ -353,5 +360,119 @@ body {
   .contact-container {
     flex-direction: column;
     align-items: center;
+  }
+}
+
+
+/* Responsive Layout Adjustments */
+@media (max-width: 1024px) {
+  .home {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .home-content {
+    max-width: 100%;
+  }
+
+  .home-content h1 {
+    font-size: 48px;
+  }
+
+  .name-highlight {
+    font-size: 40px;
+    padding: 10px 20px;
+  }
+
+  .home-content h2 {
+    font-size: 20px;
+  }
+
+  .hero-image img {
+    width: 250px;
+    height: 250px;
+    margin-top: 30px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .education-container,
+  .projects-container,
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px 20px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .nav-links a {
+    font-size: 16px;
+  }
+
+  .project-card,
+  .education-card,
+  .contact-card {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-content h1 {
+    font-size: 38px;
+  }
+
+  .name-highlight {
+    font-size: 30px;
+    padding: 8px 15px;
+  }
+
+  .home-content h2 {
+    font-size: 18px;
+  }
+
+  .home-content p {
+    font-size: 16px;
+  }
+
+  .btn {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .icon-circle {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .section-title {
+    font-size: 36px;
+  }
+
+  .contact-card h3,
+  .education-card h3,
+  .project-card h3 {
+    font-size: 20px;
+  }
+
+  .contact-card p,
+  .education-card p,
+  .project-card p {
+    font-size: 15px;
   }
 }
