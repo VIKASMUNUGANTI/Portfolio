@@ -119,8 +119,8 @@ body {
 }
 
 .name-highlight{
-  font-size: 30px;
-  padding: 10px 10px;
+  font-size: 56px;
+  padding: 0px 20px;
 }
 
 @keyframes fadeImage {
