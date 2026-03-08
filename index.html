@@ -1,163 +1,321 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Vikas Munuganti - Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css "/>
-  <link rel="icon" href="favicon.png" type="image/png">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Vikas Munuganti Portfolio</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="./favicon.png" type="">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 </head>
+
 <body>
 
-<!-- Loader -->
-<div id="loader">
-  <div class="spinner"></div>
-  <p>Loading your experience...</p>
-</div>
+  <!-- Loader -->
 
-<!-- Navbar -->
-<nav class="navbar">
-  <div class="logo">VM</div>
-  <ul class="nav-links">
-    <li><a href="#home" class="nav-link">Home</a></li>
-    <li><a href="#education-section" class="nav-link">Education</a></li>
-    <li><a href="#projects-section" class="nav-link">Projects</a></li>
-    <li><a href="#contact-widget" class="nav-link" id="contact-trigger">Contact</a></li>
-  </ul>
-</nav>
+  <div id="loader">
 
-<!-- Home Section -->
-<section class="home" id="home">
+    <div class="spinner"></div>
 
-  <!-- Certificates Icon -->
+    <p>Loading your experience...</p>
 
-
-  <div class="home-content">
-    <h1><span class="name-highlight">VIKAS MUNUGANTI</span></h1>
-    <h2>MASTERED DSA 😁</h2>
-    <h2>HTML, CSS, JavaScript, GIT</h2>
-    <p>Optimizing solutions / Passionate about Data Structures and Algorithms</p>
-    <div class="buttons">
-      <a href="Certificates\VIKAS_RESUME.pdf" download class="btn">Download Resume</a>
-      
-    <div class="social-icons">
-        <a href="https://github.com/VIKASMUNUGANTI " target="_blank" class="icon-circle"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/in/vikas-munuganti-8a6b34294 " target="_blank" class="icon-circle"><i class="fab fa-linkedin"></i></a>
-        <a href="https://instagram.com/vikas_munuganti " target="_blank" class="icon-circle"><i class="fab fa-instagram"></i></a>
-        <a href="certificates.html" class="icon-circle" target="_blank"><i class="fas fa-award"></i></a>
-    </div>
-    </div>
   </div>
-  <div class="hero-image">
-    <img src="p1-1.png" alt="Vikas Munuganti">
-  </div>
-</section>
 
-<!-- Education Section -->
-<section class="education" id="education-section">
-  <h2 class="section-title">Education</h2>
-  <div class="education-container">
-    <div class="education-card">
-      <h3>Bachelor of Technology (B.Tech)</h3>
-      <p class="school-name">ACE Engineering College</p>
-      <p class="education-year">2022 - 2026</p>
-      <p class="education-desc">Specialization: Computer Science and Data Science</p>
+
+
+  <!-- Navbar -->
+
+  <nav class="navbar">
+
+    <div class="logo">VM</div>
+
+    <ul class="nav-links">
+
+      <li><a href="#home">Home</a></li>
+
+      <li><a href="#education-section">Education</a></li>
+
+      <li><a href="#projects-section">Projects</a></li>
+
+      <li><a href="#footer">Contact</a></li>
+
+    </ul>
+
+  </nav>
+
+
+
+  <!-- Home -->
+
+  <section class="home" id="home">
+
+    <div class="home-content">
+
+      <h1 class="line line1">
+        <span class="name-highlight">VIKAS MUNUGANTI</span>
+      </h1>
+
+      <h2 class="line line2">Aspiring Software Engineer | Web Developer </h2>
+
+      <h2 class="line line3">
+        Java • Python • JavaScript • Web Development • AI • DSA
+      </h2>
+
+      <p class="line line4">
+        Engineering intelligent software and creating impactful web solutions
+      </p>
+
+      <div class="buttons line line5">
+
+        <a href="https://vikasmunuganti.github.io/E-Resume/" class="btn" target="_blank">
+
+          Resume
+
+        </a>
+
+        <div class="social-icons">
+
+          <a href="https://github.com/VIKASMUNUGANTI" target="_blank" class="icon-circle">
+            <i class="fab fa-github"></i>
+          </a>
+
+          <a href="https://linkedin.com/in/vikas-munuganti-8a6b34294" target="_blank" class="icon-circle">
+            <i class="fab fa-linkedin"></i>
+          </a>
+
+          <a href="https://instagram.com/vikas_munuganti" target="_blank" class="icon-circle">
+            <i class="fab fa-instagram"></i>
+          </a>
+
+        </div>
+
+      </div>
+
     </div>
-    <div class="education-card">
-      <h3>Intermediate (MPC)</h3>
-      <p class="school-name">SR Junior College</p>
-      <p class="education-year">2020 - 2022</p>
-      <p class="education-desc">Focused on Mathematics, Physics, and Chemistry</p>
-    </div>
-    <div class="education-card">
-      <h3>High School</h3>
-      <p class="school-name">Zilla Parishad High School</p>
-      <p class="education-year">2019 - 2020</p>
-      <p class="education-desc">Graduated with Distinction</p>
-    </div>
-  </div>
-</section>
 
-<!-- Projects Section -->
-<section class="projects" id="projects-section">
-  <h2 class="section-title">Projects</h2>
-  <div class="projects-container">
-    <!-- AI Code Reviewer -->
-    <div class="project-card">
-      <h3>AI Code Reviewer</h3>
-      <p>Built an intelligent code review platform using MERN and OpenAI APIs.</p>
-      <a href="Certificates\AI-Powered-Code-Reviewer.pdf" target="_blank" class="project-btn">View Documentation</a>
+
+    <div class="hero-image">
+
+      <img src="p1-1.png">
+
     </div>
 
-    <!-- Portfolio Website -->
-    <div class="project-card">
-      <h3>Portfolio Website</h3>
-      <p>Designed and developed my personal portfolio with beautiful transitions and 3D effects.</p>
+  </section>
+
+
+
+  <!-- Education -->
+
+  <section class="education reveal" id="education-section">
+
+    <h2 class="section-title">Education</h2>
+
+    <div class="education-container">
+
+      <div class="education-card">
+
+        <h3>B.Tech</h3>
+
+        <p>ACE Engineering College</p>
+
+        <p>2022 - 2026</p>
+
+        <p>Computer Science and Data Science</p>
+
+      </div>
+
+
+      <div class="education-card">
+
+        <h3>Intermediate</h3>
+
+        <p>SR Junior College</p>
+
+        <p>2020 - 2022</p>
+
+      </div>
+
+
+      <div class="education-card">
+
+        <h3>High School</h3>
+
+        <p>Zilla Parishad High School</p>
+
+        <p>2019 - 2020</p>
+
+      </div>
+
     </div>
 
-    <!-- Plant Disease Detection -->
-    <div class="project-card">
-      <h3>Plant Disease Detection</h3>
-      <p>Real-time chat app using Node.js, Express, and Socket.IO</p>
-      <a href="Certificates\PlantDiseaseDetection.pdf" target="_blank" class="project-btn">View Documentation</a>
+  </section>
+
+
+
+  <!-- Projects -->
+
+  <section class="projects reveal" id="projects-section">
+
+    <h2 class="section-title">Projects</h2>
+
+    <div class="projects-container">
+
+      <div class="project-card">
+
+        <h3>AI Code Reviewer</h3>
+
+        <p>MERN stack platform for automatic AI code review.</p>
+
+      </div>
+
+
+      <div class="project-card">
+
+        <h3>Portfolio Website</h3>
+
+        <p>Modern animated developer portfolio.</p>
+
+      </div>
+
+
+      <div class="project-card">
+
+        <h3>Plant Disease Detection</h3>
+
+        <p>Machine learning model to detect crop diseases.</p>
+
+      </div>
+
     </div>
-  </div>
-</section>
 
-<!-- Contact Widget -->
-<div id="contact-widget">
-  <button id="open-form">&#9993;</button>
-  <form id="contact-form" action="https://formspree.io/f/xyzwkryl " method="POST">
-    <h3>Contact Me</h3>
-    <input type="text" name="name" placeholder="Your Name" required />
-    <input type="email" name="email" placeholder="Your Email" required />
-    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-    <button type="submit">Send</button>
-    <button type="button" id="close-form">Close</button>
-  </form>
-</div>
+  </section>
 
-<!-- Scripts -->
-<script>
-  // Loader fade-out
-  window.addEventListener("load", () => {
-    const loader = document.getElementById("loader");
-    loader.style.opacity = "0";
-    loader.style.visibility = "hidden";
-  });
 
-  // Open selected PDF in new tab
-  function openPDF(selectObj) {
-    const pdfUrl = selectObj.value;
-    if (pdfUrl) {
-      window.open(pdfUrl, '_blank');
-    }
-  }
 
-  // Smooth scroll for nav links
-  document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('.nav-link[href^="#"]').forEach(link => {
-      link.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          window.scrollTo({ top: target.offsetTop - 50, behavior: 'smooth' });
-        }
-      });
+  <!-- Footer -->
+
+  <footer class="footer" id="footer">
+
+    <h2>Contact</h2>
+
+    <div class="email-box">
+
+      <span id="email">vikasmunuganti933@gmail.com</span>
+
+      <button onclick="copyEmail()">Copy</button>
+
+    </div>
+
+
+    <div class="footer-social">
+
+      <a href="https://github.com/VIKASMUNUGANTI">
+        <i class="fab fa-github"></i>
+      </a>
+
+      <a href="https://linkedin.com/in/vikas-munuganti-8a6b34294">
+        <i class="fab fa-linkedin"></i>
+      </a>
+
+      <a href="https://instagram.com/vikas_munuganti">
+        <i class="fab fa-instagram"></i>
+      </a>
+
+    </div>
+
+    <p class="copyright">
+      © 2026 Vikas Munuganti
+    </p>
+
+  </footer>
+
+
+
+  <script>
+
+    /* Loader */
+
+    window.addEventListener("load", () => {
+
+      document.getElementById("loader").style.display = "none";
+
     });
-  });
 
-  // Contact form toggle
-  const openBtn = document.getElementById('open-form');
-  const closeBtn = document.getElementById('close-form');
-  const form = document.getElementById('contact-form');
-  const contactTrigger = document.getElementById('contact-trigger');
 
-  openBtn.addEventListener('click', () => form.style.display = 'flex');
-  closeBtn.addEventListener('click', () => form.style.display = 'none');
-  contactTrigger.addEventListener('click', () => form.style.display = 'flex');
-</script>
+    /* Smooth Scroll */
+
+    document.querySelectorAll('nav a').forEach(link => {
+
+      link.addEventListener('click', function (e) {
+
+        e.preventDefault();
+
+        const target = document.querySelector(this.getAttribute('href'));
+
+        window.scrollTo({
+
+          top: target.offsetTop - 60,
+
+          behavior: "smooth"
+
+        });
+
+      });
+
+    });
+
+
+    /* Copy Email */
+
+    function copyEmail() {
+
+      const email = document.getElementById("email").innerText;
+
+      navigator.clipboard.writeText(email);
+
+      alert("Email copied!");
+
+    }
+
+
+    /* Section Reveal */
+
+    function reveal() {
+
+      const reveals = document.querySelectorAll(".reveal");
+
+      reveals.forEach(section => {
+
+        const windowHeight = window.innerHeight;
+
+        const elementTop = section.getBoundingClientRect().top;
+
+        const revealPoint = 120;
+
+        if (elementTop < windowHeight - revealPoint) {
+
+          section.classList.add("active");
+
+        } else {
+
+          section.classList.remove("active");
+
+        }
+
+      });
+
+    }
+
+    window.addEventListener("scroll", reveal);
+
+  </script>
 
 </body>
+
 </html>
