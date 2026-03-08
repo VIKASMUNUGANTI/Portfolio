@@ -37,19 +37,36 @@ body {
 }
 
 .nav-links a {
+  display: inline-block;
   text-decoration: none;
   color: #333;
   font-size: 18px;
+  padding: 6px 10px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ddd;
+  background-color: #1e3c72;
+  border-color: #1e3c72;
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
 /* Home Section Layout */
 .home {
   display: flex;
-  flex-direction: row-reverse; /* Desktop: Image on Right, Content on Left */
-  justify-content: space-around;
+  flex-direction: row-reverse;
+  justify-content: space-between;
   align-items: center;
   padding: 70px;
   min-height: 90vh;
+}
+
+.hero-image img{
+  margin-left:200px;
 }
 
 .home-content {
@@ -85,7 +102,6 @@ body {
   display: inline-block;
 }
 
-/* Image */
 .hero-image {
   flex: 1;
   display: flex;
@@ -100,6 +116,11 @@ body {
   opacity: 0;
   animation: fadeImage 1s forwards;
   animation-delay: 1s;
+}
+
+.name-highlight{
+  font-size: 30px;
+  padding: 10px 10px;
 }
 
 @keyframes fadeImage {
@@ -224,13 +245,17 @@ body {
 }
 
 .footer-social { margin: 25px; }
+
 .footer-social a {
   color: white;
   font-size: 24px;
   margin: 0 10px;
 }
 
-.copyright { opacity: 0.7; font-size: 14px; }
+.copyright {
+  opacity: 0.7;
+  font-size: 14px;
+}
 
 /* Loader */
 #loader {
@@ -254,14 +279,95 @@ body {
   animation: spin 1s linear infinite;
 }
 
-@keyframes spin { 100% { transform: rotate(360deg); } }
+.social-icons a{
+  text-decoration: none;
+}
+
+.social-icons a:hover{
+  background-color: #1e3c72;
+  color: #eee;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
 
 /* =========================================
-   MEDIA QUERIES (RESPONSIVENESS)
+   EDUCATION FULL SCREEN ANIMATION
    ========================================= */
 
-/* Mobile & Tablet Styles */
-@media screen and (max-width: 768px) {
+.education{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  position:relative;
+  overflow:hidden;
+}
+
+.education::before{
+  content:"";
+  position:absolute;
+  width:600px;
+  height:600px;
+  background:radial-gradient(circle,#1e3c7230,transparent 70%);
+  top:-200px;
+  left:-200px;
+  animation:floatBg 8s linear infinite;
+}
+
+.education::after{
+  content:"";
+  position:absolute;
+  width:500px;
+  height:500px;
+  background:radial-gradient(circle,#2a529830,transparent 70%);
+  bottom:-200px;
+  right:-200px;
+  animation:floatBg 10s linear infinite reverse;
+}
+
+@keyframes floatBg{
+  0%{transform:translateY(0) rotate(0deg);}
+  50%{transform:translateY(60px) rotate(180deg);}
+  100%{transform:translateY(0) rotate(360deg);}
+}
+
+.education-card{
+  opacity:0;
+  transform:translateY(120px) scale(.8);
+  transition:all .8s cubic-bezier(.2,.7,.2,1);
+}
+
+.education.active .education-card{
+  opacity:1;
+  transform:translateY(0) scale(1);
+}
+
+.education.active .education-card:nth-child(1){
+  transition-delay:.2s;
+}
+
+.education.active .education-card:nth-child(2){
+  transition-delay:.5s;
+}
+
+.education.active .education-card:nth-child(3){
+  transition-delay:.8s;
+}
+
+.education-card:hover{
+  transform:translateY(-12px) scale(1.03);
+  box-shadow:0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* =========================================
+   MEDIA QUERIES
+   ========================================= */
+
+@media screen and (max-width:768px) {
+
   .navbar {
     padding: 15px 20px;
     flex-direction: column;
@@ -272,27 +378,32 @@ body {
     gap: 15px;
   }
 
-  .nav-links a { font-size: 16px; }
+  .nav-links a {
+    font-size: 16px;
+  }
 
   .home {
-    flex-direction: column; /* Stacks vertically */
+    flex-direction: column;
     padding: 40px 20px;
     text-align: center;
   }
 
-  /* Ensures Image is above the content on mobile */
   .hero-image {
-    order: -1; 
+    order: -1;
     margin-bottom: 30px;
   }
 
   .hero-image img {
-    height: 350px; /* Smaller image for mobile */
-    width: auto;
+    margin: 0px;
+    height: 350px;
   }
 
   .line1 { line-height: 60px; }
-  .line2, .line3, .line4 { line-height: 1.4; margin-bottom: 15px; }
+
+  .line2, .line3, .line4 {
+    line-height: 1.4;
+    margin-bottom: 15px;
+  }
 
   .name-highlight {
     font-size: 24px;
@@ -309,7 +420,7 @@ body {
   }
 
   .education-card, .project-card {
-    width: 100%; /* Makes cards wrap and fill width */
+    width: 100%;
     max-width: 400px;
   }
 
@@ -321,12 +432,17 @@ body {
     width: 100%;
     word-break: break-all;
   }
+
 }
 
-/* Very Small Devices */
-@media screen and (max-width: 480px) {
+@media screen and (max-width:480px) {
+
   .hero-image img {
     height: 250px;
   }
-  .section-title { font-size: 30px; }
+
+  .section-title {
+    font-size: 30px;
+  }
+
 }
